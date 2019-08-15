@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Opus-Home</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      .card-home {
+        padding: 30px 0 0 0;
+        width: 100%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        Gera Arquivo Bancário
+      </a>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/sair">SAIR</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">    
+      <div class="row">
+
+        <div class="card-home">
+          <div class="card">
+            <div class="card-header">
+              Geração de arquivo bancário
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  
+                  <form method="post" action="registra_chamado.php">
+                    <div class="form-group">
+                      <label>Banco</label>
+                      <input name="banco" type="text" class="form-control" placeholder="Informe o código do Banco">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Período</label>
+                      <input name="período" type="text" class="form-control" placeholder="Informe o período">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>Gerar arquivo por:</label>
+                      <select name="categoria" class="form-control">
+                      	<option>Período</option>
+                      	<option>Banco</option>
+                      	<option>Cargo</option>
+                      	<option>Centro de Custo</option>
+                        <option>Funcionário</option>
+                      </select>
+                    </div>
+                    <div class="row mt-5">
+                      <div class="col-12">
+                        <button class="btn btn-lg btn-info btn-block bg-primary" type="submit">Gerar</button>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+          </div>  
+        </div>
+    </div>
+  </body>
+</html>
